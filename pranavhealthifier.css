@@ -1,0 +1,226 @@
+* {
+    font-family: var(--body-font);
+}
+
+.img {
+    display: flex;
+    width: 100vh;
+    /* justify-content: center;
+    align-content: center; */
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    color: #676767;
+}
+
+.alignleft {
+    position: relative;
+    left: -100vh;
+    z-index: 10;
+}
+
+.frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+
+/* 5 */
+
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255, 27, 0);
+    background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+}
+
+.btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+.pay {
+    color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-flex;
+    margin: .5vh;
+    padding: .5vh;
+    font-size: 5vh;
+    display: flex;
+    position: relative;
+    text-transform: capitalize;
+    ;
+}
+
+.hyperlink {
+    color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-flex;
+    margin: .5vh;
+    padding: .5vh;
+    font-size: 5vh;
+    display: flex;
+    position: relative;
+    text-decoration: none
+}
+
+
+/* slide 2 */
+
+.qr {
+    margin: .5vh;
+    padding: .5vh;
+    justify-content: center;
+    align-content: center;
+    /* top: -12px; */
+    position: relative;
+    /* left: 49px; */
+    display: flex;
+}
+
+.qrcode {
+    color: #6c7234;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6vh;
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+    z-index: 99;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
+    border: .5vh royalblue solid;
+    position: relative;
+    left: 85vh;
+}
+
+.scandone {
+    color: teal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3vh;
+    display: flex;
+    position: relative;
+}
+
+.or {
+    font-size: 7vh;
+    color: #585b54;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.upi {
+    color: steelblue;
+    font-size: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: .5vh;
+    padding: .5vh;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+}
+
+
+/* slide 3 */
+
+.paydonebox {
+    margin: 1vh;
+    padding: 1vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.paydone {
+    color: steelblue;
+    border: 1vh solid rgb(165, 13, 13);
+    font-size: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: .5vh;
+    padding: .5vh;
+    display: inline;
+    width: 50vh;
+    justify-content: center;
+    align-self: center;
+}
+
+* {
+    text-decoration: none;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* slide 4 */
+
+.note,
+.no {
+    color: steelblue;
+    font-size: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: .5vh;
+    padding: .5vh;
+    display: flex;
+    /* width: 50vh; */
+    justify-content: center;
+    align-self: center;
+}
