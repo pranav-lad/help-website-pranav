@@ -1,0 +1,6 @@
+body {
+    background-image: url("backslide1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
