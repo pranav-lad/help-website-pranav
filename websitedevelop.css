@@ -901,6 +901,21 @@ footer {
     text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+h1 {
+    font-size: 40px;
+    margin: 10px;
+    color: #fff;
+    padding: 5px;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    margin: 0;
+}
+
 .unit4 {
     /* display: subgrid; */
     text-transform: uppercase;
