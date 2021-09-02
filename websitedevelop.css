@@ -1,4 +1,5 @@
 * {
+    /* text-transform: capitalize; */
     margin: 0;
     padding: 0;
     box-sizing: content-box;
@@ -10,6 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    text-transform: capitalize;
 }
 
 .header {
@@ -62,11 +64,6 @@ body {
     text-transform: uppercase;
 }
 
-.counter {
-    /* width: 50px; */
-    margin: 0px 10px 10px 10px;
-}
-
 body {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(39, 9, 121, 1) 41%, rgba(0, 212, 255, 1) 100%);
@@ -101,20 +98,6 @@ body {
     border-radius: 12px;
     border: #fff 1px solid;
     z-index: 10;
-}
-
-.counter {
-    width: 90px;
-    font-size: 25px;
-    height: 35px;
-    color: #fff;
-    font-family: 'Muli', sans-serif;
-    background-color: #192a56;
-    flex-direction: column;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .facebook {
@@ -327,7 +310,7 @@ footer {
 }
 
 .mathscontent {
-    width: 900px;
+    width: fit-content;
     text-decoration: none;
     color: #fff;
 }
@@ -1026,8 +1009,8 @@ h1 {
 .gridbox3 {
     text-decoration: none;
     color: #fff;
-    width: 890px;
-    height: 500px;
+    width: fit-content;
+    height: fit-content;
     grid-auto-flow: column;
     grid-template-columns: auto;
     background-color: #161b22;
@@ -1038,12 +1021,12 @@ h1 {
     /* grid-column: auto; */
     grid-gap: 2vh;
     flex-direction: column;
-    margin: 20px;
+    margin: 10px;
     grid-column: auto;
-    padding: 24px;
+    padding: 20px;
     background-color: #161b22;
     color: aliceblue;
-    justify-content: left;
+    justify-content: center;
     align-content: center
 }
 
@@ -1080,6 +1063,7 @@ h1 {
 }
 
 a {
+    text-transform: capitalize;
     text-decoration: none;
     color: #fff;
     text-transform: none;
@@ -1247,7 +1231,8 @@ a {
     /* color: aliceblue; */
     /* justify-content: center; */
     /* align-content: center; */
-    width: 900px;
+    width: fit-content;
+    height: fit-content;
     grid-column: 1/2;
     text-decoration: none;
     color: #fff;
@@ -1302,6 +1287,7 @@ a {
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 500;
+    width: fit-content;
     flex-wrap: wrap;
     line-height: 20px;
     padding: 5px 16px;
@@ -1333,7 +1319,7 @@ a {
     flex-wrap: wrap;
     grid-column: auto;
     grid-template-columns: auto;
-    width: 400px;
+    width: fit-content;
     /* display: flex; */
     align-content: space-between;
     justify-content: space-between;
@@ -1344,7 +1330,7 @@ a {
 .exambox {
     /* display: flex; */
     align-content: space-between;
-    width: 400px;
+    width: fit-content;
     margin: 10px;
     padding: 10px;
     justify-content: space-between;
@@ -1353,6 +1339,8 @@ a {
 .boxing {
     display: flex;
     flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
     justify-content: space-between;
     align-content: space-between;
 }
