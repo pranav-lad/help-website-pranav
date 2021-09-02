@@ -1103,6 +1103,10 @@ a {
     white-space: nowrap;
     flex-wrap: wrap;
     text-align: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(39, 9, 121, 1) 41%, rgba(0, 212, 255, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 0.5s ease infinite;
 }
 
 .IE_2_sol {
