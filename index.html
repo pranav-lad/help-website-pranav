@@ -2,7 +2,18 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DE73Z8JJV3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DE73Z8JJV3');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
@@ -23,11 +34,7 @@
                 <div class="leftnavsection">
                     <div class="pranavtag"> &copy pranav lad</div>
                     <div class="darkmodebutton"><button onclick="myFunction()">Toggle dark mode</button></div>
-                    <div class="home">
-                        <a href="pranavediteddev.html"><img src="home.png" alt="home" class="homeimg"></a>
-                    </div>
                 </div>
-
 
             </div>
 
@@ -41,7 +48,21 @@
                 <div class="counter">
 
                     <div id="count">0</div>
+
                 </div>
+                <script>
+                    const countEl = document.getElementById('count');
+
+                    updateVisitCount();
+
+                    function updateVisitCount() {
+                        fetch('https://api.countapi.xyz/update/florin-popcom/codepen/?amount=1')
+                            .then(res => res.json())
+                            .then(res => {
+                                countEl.innerHTML = res.value;
+                            })
+                    }
+                </script>
                 <div class="facebook">
                     <a href=": https://www.facebook.com/profile.php?id=100011040876280"><img src="facebook.png" alt="error" style="width: 35px;"></a>
                 </div>
@@ -105,34 +126,8 @@
             </div>
 
 
-
-        </div>
-        <div class="mathscontent phyicsgridbox gridbox">
-
-            <div class="physicscontentbox">physics content</div>
-
-            <div class="largerquestionbank">
-                <a href="https://drive.google.com/file/d/1F4QviInmUCJ97xeUjmvIr8QOjfCLZBRr/view?usp=sharing">
-                    Physics Large Question Bank</a>
-            </div>
-            <div class="mechanics1"><a href="https://drive.google.com/file/d/1_UJl1zaZVG8YkcPtIlP5vy1PMC9eGC1g/view?usp=sharing">quantum
-                    mechanics 1</a></div>
-            <div class="mechanics2"> <a href="https://drive.google.com/file/d/1EK4xijdyEN8UgriOFnlUb0qvcZyaYGA7/view?usp=sharing">
-                    quantum mechanics 2</a></div>
-            <div class="physicspdf"><a href="https://drive.google.com/file/d/15MNjmQmpHghFkcdzi2AwpmUn9WIF2H6S/view?usp=sharing
-                        " style="font-style: oblique italic;z-index: 100;;"> &#8719 all physics
-                    theory PDF &#8719</a></div>
-            <div class="searchtheory">
-                <a href="https://drive.google.com/file/d/1WgPO9piDvFDFehRY7tNrt7gBPzN4tQKg/view?usp=sharing">all
-                    searchable theory </a>
-            </div>
-
-
-
-
         </div>
     </div>
-
     <footer>&copy; website made by SUMIT BARMECHA</footer>
 </body>
 
