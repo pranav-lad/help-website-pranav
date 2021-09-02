@@ -1121,6 +1121,24 @@ a {
     text-align: center;
 }
 
+.IE_2_sol {
+    display: subgrid;
+    box-sizing: content-box;
+    border: silver 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    grid-column: 1/2;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 16px;
+    position: relative;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
 .mechanics1 {
     display: subgrid;
     box-sizing: content-box;
