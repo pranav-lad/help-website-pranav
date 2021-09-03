@@ -66,7 +66,7 @@ body {
 
 body {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(39, 9, 121, 1) 41%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgb(248, 149, 238) 0%, rgb(234, 233, 239) 41%, rgba(0, 212, 255, 1) 100%);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     height: 100vh;
