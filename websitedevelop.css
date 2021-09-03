@@ -66,7 +66,7 @@ body {
 
 body {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgb(248, 149, 238) 0%, rgb(234, 233, 239) 41%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(39, 9, 121, 1) 41%, rgba(0, 212, 255, 1) 100%);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     height: 100vh;
@@ -312,6 +312,7 @@ footer {
 .mathscontent {
     width: fit-content;
     text-decoration: none;
+    justify-content: space-between;
     color: #fff;
 }
 
@@ -1383,4 +1384,141 @@ a {
     flex-wrap: wrap;
     text-align: center;
     background: black;
+}
+
+.boxstyle {
+    /* display: subgrid; */
+    box-sizing: content-box;
+    border: silver 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 16px;
+    flex-wrap: wrap;
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    width: fit-content;
+    justify-content: center;
+    grid-column: 1/2;
+}
+
+.curveslecturencontent {
+    display: flex;
+    /* border: 1px solid gray; */
+    width: fit-content;
+    justify-content: center;
+    align-self: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.curvebox {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+}
+
+.graphicsbox {
+    margin: 15px;
+    padding: 15px;
+    background-color: #161b22;
+    border: 1px solid gray;
+    height: fit-content;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+}
+
+.graphicmaincontent {
+    color: white;
+    margin: 5px;
+    width: fit-content;
+    padding: 5px;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    border: 1px solid gray;
+    text-transform: uppercase;
+}
+
+.dls {
+    text-decoration: none;
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+    background-color: #161b22;
+    border: 1px solid gray;
+    color: aliceblue;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    /* grid-column: auto; */
+    grid-gap: 2vh;
+    flex-direction: row;
+    margin: 20px;
+    grid-row: auto;
+    padding: 24px;
+    background-color: #161b22;
+    color: aliceblue;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.youtubelectures {
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto;
+    color: #ffffff;
+    background-color: #161b22;
+    /* border: 1px solid gray; */
+    border-radius: 12px;
+    height: 280px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    width: 300px;
+}
+
+.graphinotes {
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto;
+    color: #ffffff;
+    background-color: #161b22;
+    /* border: 1px solid gray; */
+    border-radius: 12px;
+    height: 400px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    width: fit-content
+}
+
+.boxcolumn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: space-around;
+}
+
+.oimate,
+.dudeperfect,
+.note {
+    background: linear-gradient(90deg, rgb(255, 12, 12) 0%, rgb(47, 79, 197) 41%, rgb(15, 20, 70) 100%);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+    border-radius: 6px;
 }
