@@ -148,6 +148,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
     max-width: 20%;
     min-width: 115px;
     margin: 10px;
@@ -280,4 +281,68 @@ nav a:hover {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.previous h2 {
+    padding: 5px 10px;
+    border: 2px solid gray;
+    border-radius: 25px;
+    background: rgb(65, 65, 65);
+}
+
+.previous {
+    margin: 0;
+    text-decoration: none;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+.previous:hover {
+    color: rgb(172, 172, 172);
+}
+
+.previous h2:hover {
+    color: rgb(204, 196, 196);
+    background: rgb(27, 27, 27);
+}
+
+.hod {
+    margin: 0;
+}
+
+.new-card {
+    padding: 10px 0;
+    color: rgb(214, 185, 185);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to right top, #2b3533, #304a4e);
+}
+
+.new-card .links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+}
+
+.new-card .links a {
+    text-decoration: none;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    color: yellow;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.new-card a p {
+    margin: 0;
+    padding: 0;
 }
