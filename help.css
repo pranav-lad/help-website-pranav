@@ -288,6 +288,7 @@ nav a:hover {
     border: 2px solid gray;
     border-radius: 25px;
     background: rgb(65, 65, 65);
+    margin: 0;
 }
 
 .previous {
@@ -345,4 +346,22 @@ nav a:hover {
 .new-card a p {
     margin: 0;
     padding: 0;
+}
+
+.lect-section {
+    width: 100%;
+    display: grid;
+}
+
+@media only screen and (min-width: 968px) {
+    .lect-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.new-card {
+    max-width: fit-content;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
 }
