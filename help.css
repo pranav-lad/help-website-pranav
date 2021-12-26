@@ -354,10 +354,22 @@ nav a:hover {
     flex-direction: column;
 }
 
-@media only screen and (min-width: 968px) {}
-
 .new-card {
     min-width: 100%;
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 968px) {
+    .lect-section .new-card .links a {
+        width: 90%;
+        margin: 5px;
+        text-align: center;
+    }
+    .lect-section .new-card .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
