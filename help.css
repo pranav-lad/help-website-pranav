@@ -440,7 +440,7 @@ nav a:hover {
     justify-content: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
     .playlists ul {
         flex-direction: column;
     }
