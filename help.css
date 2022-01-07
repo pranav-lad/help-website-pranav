@@ -373,3 +373,71 @@ nav a:hover {
         justify-content: center;
     }
 }
+
+.playlists {
+    background: rgb(61, 85, 67);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 5px solid black;
+    border-left: 7px solid black;
+    border-right: 10px solid black;
+}
+
+.playlists ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.playlists a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.playlists a li {
+    background: rgb(214, 208, 208);
+    padding: 5px 10px;
+    border-bottom: 3px solid rgb(34, 30, 23);
+    width: 205px;
+}
+
+.heading2 h2 img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.heading2 h2 {
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.75px;
+}
+
+.heading2 {
+    border-left: 7px solid black;
+    border-right: 10px solid black;
+    background: rgb(61, 85, 67);
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 888px) {
+    .playlists ul {
+        flex-direction: column;
+    }
+}
