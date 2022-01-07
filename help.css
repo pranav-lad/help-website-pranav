@@ -411,6 +411,10 @@ nav a:hover {
     width: 205px;
 }
 
+.playlists a li:hover {
+    background :    rgb(136, 136, 136);
+}
+
 .heading2 h2 img {
     width: 70px;
     margin-right: 10px;
@@ -436,7 +440,7 @@ nav a:hover {
     justify-content: center;
 }
 
-@media only screen and (max-width: 888px) {
+@media only screen and (max-width: 1000px) {
     .playlists ul {
         flex-direction: column;
     }
