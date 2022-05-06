@@ -3,130 +3,153 @@
 
 <!DOCTYPE html>
 <html>
-  <head><title>Pranav Lad<title></head>
+  <head><title>Pranav Lad</title></head>
     <body>
-      <style>
-        * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
-  
-  body {
-    background-color: #222;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  #wrapper {
-    display: inline-block;
-    max-width: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-  }
-  
-  #logo {
-    display: block;
-    margin: 0 auto 30px;
-    font-size: 48px;
-  }
-  
-  #typed-wrapper {
-    font-size: 20px;
-    color: #444;
-    text-align: center;
-  }
-    
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
-  .cf:before,
-  .cf:after {
-    content: " ";
-    display: table;
-  }
-  
-  .cf:after {
-    clear: both;
-  }
-  
-  .typed-cursor {
-    display: inline-block;
-    margin-left: -8px;
-    
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #222;
+  font-family: "Open Sans", sans-serif;
+}
+
+#wrapper {
+  display: inline-block;
+  max-width: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 30px;
+  font-size: 68px;
+  width: 100%;
+}
+
+#typed-wrapper {
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.typed-cursor {
+  display: inline-block;
+  margin-left: -8px;
+
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
     opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
   }
-  
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  50% {
+    opacity: 0;
   }
-  
-  @-webkit-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
-  
-  @-moz-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
   }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
       </style>
-    <div id="wrapper">
+   <div id="wrapper">
   <h1 id="logo">Pranav Lad</h1>
+  <p style = "font-size : 40px">New Site Coming Soon...</p>
   <div id="typed-wrapper" class="cf">
     <span id="typed">
-    				<span class="sr-only">New Website Publishing Soon...</span>
+    				<span class="sr-only">New Website Publishing Soon...</span></span>
   </div>
 </div>
-    <script>// Custom
-$(function() {
+ <script>
+$(function () {
   var $typed = $("#typed");
   $typed.typed({
     strings: [$typed.text()],
     typeSpeed: 50,
     startDelay: 1000
   });
-});</script>
+});
+</script>
     </body>
 </html>
