@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>assignment 3 - PCM</h2>
+    <p>#include <iostream>
+        <br>#include <math.h>
+        <br>using namespace std;
+        <br>int main()
+        <br>{ int A, x[512],T,t,L,b,size,p,n,k,z[512];
+        <br>float f;
+        <br>cout<<"Enter Amplitude"<< endl;
+        <br>cin>>A;
+        <br>cout<<"Enter Time Period"<< endl;
+        <br>cin>>T;
+        <br>f=(1.0/T);
+        <br>for(t=0;t<=T;t++)
+        <br>{ x[t]=A*sin(2*22/7*f*t);
+        <br>cout<< x[t]<<" "; }
+        <br>cout<< endl;
+        <br>cout<<"Enter number of bits for Quantization"<< endl;
+        <br>cin>>b;//b means n
+        <br>cout<< endl;
+        <br>L=pow(2,b-1);
+        <br>size=A/L;
+        <br>for(t=0;t<=T;t++)
+        <br>{ if(x[t]>=0){
+        <br>p=0;
+        <br>n=size;
+        <br>for(int k=0;k< L;k++) {
+        <br>if(x[t]>=p && x[t]< n) {
+        <br>z[t] = k+L;
+        <br>break; }
+        <br>p=n;
+        <br>n=n+size;
+        <br>} }
+        <br>else{
+        <br>p = -1, n=-size;
+        <br>for(k=0;k< L;k++){
+        <br>if(x[t]<=p && x[t]>=n) {
+        <br>z[t]=L-k-1;
+        <br>break;}
+        <br>p=n;
+        <br>n=n-size; } }
+        <br>cout<< z[t];
+        <br>cout<<" ";}
+        <br>
+        <br>for(t=0;t<=T;t++){
+        <br>int i=1,sum=0,rem=0;
+        <br>do{ rem = z[t]%2;
+        <br>sum = sum + (i*rem);
+        <br>z[t] = z[t]/2;
+        <br>i = i*10;}while(z[t]>0);
+        <br>cout<< sum<<"\n";
+        <br>}
+        <br>return 0;
+        }
+        
+        </p>
+<h2>assignment 4 - tcp</h2>
+<h3>server</h3>
+<p>import java.net.*;  
+    <br> import java.io.*;  
+    <br> class MyServer{  
+    <br> public static void main(String args[])throws Exception{  
+    <br> ServerSocket ss=new ServerSocket(3341);  
+    <br> Socket s=ss.accept();  
+    <br> DataInputStream din=new DataInputStream(s.getInputStream());  
+    <br> DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
+    <br> BufferedReader br=new BufferedReader(new InputStreamReader(System.in));  
+    <br>  
+    <br> String str="",str2="";  
+    <br> while(!str.equals("Bye")){  
+    <br> str=din.readUTF();  
+    <br> System.out.println("client says: "+str);  
+    <br> str2=br.readLine();  
+    <br> dout.writeUTF(str2);  
+    <br> dout.flush();  
+    <br> }  
+    <br> din.close();  
+    <br> s.close();  
+    <br> ss.close();  
+    }}</p>
+<h3>client</h3>
+<p>import java.net.*;  
+    <br>import java.io.*;  
+    <br>class MyClient{  
+    <br>public static void main(String args[])throws Exception{  
+    <br>Socket s=new Socket("10.11.0.183",3341);  
+    <br>DataInputStream din=new DataInputStream(s.getInputStream());  
+    <br>DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
+    <br>BufferedReader br=new BufferedReader(new InputStreamReader(System.in));  
+    <br> 
+    <br>String str="",str2="";  
+    <br>while(!str.equals("Bye")){  
+    <br>str=br.readLine();  
+    <br>dout.writeUTF(str);  
+    <br>dout.flush();  
+    <br>str2=din.readUTF();  
+    <br>System.out.println("Server says: "+str2);  
+    <br>}  
+    <br> 
+    <br>dout.close();  
+    <br>s.close();  
+    }}</p>
+<h2>assignment 5 - udp</h2>
+<h3>server</h3>
+<p>import java.io.*;
+    <br>import java.net.*;
+    <br>import java.nio.charset.StandardCharsets;
+    <br>
+    <br>public class serverUDP {
+    <br>    public static void main(String[] args) throws Exception {
+    <br>        DatagramSocket ds = new DatagramSocket(1032);
+    <br>        InetAddress ra = InetAddress.getLocalHost();
+    <br>        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    <br>        byte [] buffer;
+    <br>        String str=" ";
+    <br>        String str1=" ";
+    <br>        while(!str.equals("Bye")){
+    <br>            byte[] buffer1 = new byte[20];
+    <br>            DatagramPacket packet1= new DatagramPacket(buffer1,buffer1.length);
+    <br>            ds.receive(packet1);
+    <br>            buffer1=packet1.getData();
+    <br>            str1=new String(buffer1, StandardCharsets.UTF_8);
+    <br>            System.out.println("Client says " +str1);
+    <br>            str=br.readLine();
+    <br>            buffer=str.getBytes();
+    <br>            DatagramPacket dp = new DatagramPacket(buffer, str.length(), ra, 1030);
+    <br>            ds.send(dp);
+    <br>
+    <br>
+    <br>
+    <br>        }
+    <br>    }
+    }</p>
+<h3>client</h3>
+<p>import java.io.*;
+    <br>import java.net.*;
+    <br>import java.nio.charset.StandardCharsets;
+    <br>
+    <br>public class clientUDP {
+    <br>    public static void main(String[] args) throws Exception {
+    <br>        DatagramSocket ds = new DatagramSocket(1030);
+    <br>        InetAddress ra = InetAddress.getLocalHost();
+    <br>        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    <br>        byte [] buffer;
+    <br>        String str=" ";
+    <br>        String str1=" ";
+    <br>        while(!str.equals("Bye")){
+    <br>            str=br.readLine();
+    <br>            buffer=str.getBytes();
+    <br>            DatagramPacket dp = new DatagramPacket(buffer, str.length(), ra, 1032);
+    <br>            ds.send(dp);
+    <br>            byte[] buffer1 = new byte[20];
+    <br>            DatagramPacket packet1= new DatagramPacket(buffer1,buffer1.length);
+    <br>            ds.receive(packet1);
+    <br>            buffer1=packet1.getData();
+    <br>            str1=new String(buffer1, StandardCharsets.UTF_8);
+    <br>            System.out.println("Server says " +str1);
+    <br>
+    <br>
+    <br>        }
+    <br>    }
+    }</p>
+<h2>assignment 6 - DNS </h2>
+    <h3>Python</h3>
+    <p>import socket
+     <br>   var = input('enter url or ip ')
+     <br>   
+     <br>   if(var[0] == 'w'):
+     <br>       add1 = socket.gethostbyname(var)
+     <br>       print(add1)
+     <br>   else:
+     <br>       add1 = socket.gethostbyaddr(var)
+            print(add1)</p>
+    <h3>Java</h3>
+    <p>package java;
+    <br>    import java.net.InetAddress;
+    <br>    import java.net.UnknownHostException;
+    <br>    public class dns{
+    <br>      public static void main(String args[]) {
+    <br>        try {
+    <br>    InetAddress i;
+    <br>        if(args.length!=1){
+    <br>    System.err.println("Enter the URL");
+    <br>    System.exit(-1);
+    <br>    }
+    <br>          else if(Character.isDigit(args[0].charAt(0))){
+    <br>            for (int j = 0; j < args.length; ++j ) {
+    <br>              i = InetAddress.getByAddress(args[j]);
+    <br>              System.out.println(i.getHostName()+"/"+i.getHostAddress());
+    <br>            }
+    <br>          }
+    <br>          else{
+    <br>          i=InetAddress.getByName(args[0]);
+    <br>          System.out.println(i.getHostName()+"/"+i.getHostAddress());
+    <br>          }  
+    <br>        }
+    <br>        catch(UnknownHostException exp){
+    <br>    System.err.println(""+args[0]+" Internet Address Not Found");
+    <br>      }
+    <br>    }
+    <br>    }   </p>
+</body>
+</html>
