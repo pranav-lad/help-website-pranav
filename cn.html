@@ -207,5 +207,73 @@
     <br>      }
     <br>    }
     <br>    }   </p>
+        <h3>Link State </h3>
+        <p>
+        import java.util.*;<br>
+
+public class Dijkstra<br>
+{<br>
+  public  int distance[] = new int[10];<br>
+  public  int cost[][] = new int[10][10];<br>
+
+  public void calc(int n,int s)<br>
+  {<br>
+    int flag[] = new int[n+1];<br>
+    int i,minpos=1,k,c,minimum;<br>
+       for(i=1;i<=n;i++)<br>
+    {<br>
+              flag[i]=0;<br>
+         this.distance[i]=this.cost[s][i];<br>
+     }<br>
+       c=2;<br>
+    while(c<=n)<br>
+    {<br>
+      minimum=99;<br>
+      for(k=1;k<=n;k++)<br>
+      {<br>
+             if(this.distance[k]<minimum && flag[k]!=1)<br>
+           {<br>
+            minimum=this.distance[i];<br>
+            minpos=k;<br>
+           }<br>
+         }<br>
+              flag[minpos]=1;<br>
+         c++;<br>
+         for(k=1;k<=n;k++)<br>
+    {<br>
+            if(this.distance[minpos]+this.cost[minpos][k] <  this.distance[k] && flag[k]!=1 )<br>
+          this.distance[k]=this.distance[minpos]+this.cost[minpos][k];<br>
+    } <br>
+    }<br>
+ 
+  }<br>
+  public static void main(String args[])<br>
+  {<br>
+    int nodes,source,i,j;<br>
+    Scanner in = new Scanner(System.in);<br>
+    System.out.println("Enter the Number of Nodes \n");<br>
+    nodes = in.nextInt();<br>
+    Dijkstra d = new Dijkstra();<br>
+    System.out.println("Enter the Cost Matrix Weights: \n");<br>
+         for(i=1;i<=nodes;i++)<br>
+            for(j=1;j<=nodes;j++)<br>
+       {<br>
+              d.cost[i][j]=in.nextInt();<br>
+               if(d.cost[i][j]==0)<br>
+                 d.cost[i][j]=999;<br>
+            }<br>
+     System.out.println("Enter the Source Vertex :\n");<br>
+     source=in.nextInt();<br>
+ 
+        d.calc(nodes,source);<br>
+     System.out.println("The Shortest Path from Source \t"+source+"\t to all other vertices are : \n");<br>
+          for(i=1;i<=nodes;i++)<br>
+             if(i!=source)<br>
+      System.out.println("source :"+source+"\t destination :"+i+"\t MinCost is :"+d.distance[i]+"\t");<br>
+       
+ 
+ }<br>
+}<br>
+        </p>
 </body>
 </html>
