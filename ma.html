@@ -12,15 +12,15 @@ body{
     background: #041C32;
     color: white;
     font-size: larger;
+    padding-left: 10px;
 }
 h2 {
     width: 90%;
     margin-left: 10px;
     margin-top: 20px;
-    border-radius: 50px;
-background: #072d51;
+background: linear-gradient(to right,#072d51,#052442);
 box-shadow:  5px 5px 10px #04182b,
-             -5px -5px 10px #0a4277;
+             -5px -5px 10px #061b2e;
              padding: 20px;
     
 }
@@ -277,7 +277,9 @@ section .data
 <br>	emsg_len	equ	$-emsg
 <br>;------------------------------------------------------------------------------
 <br>section .bss
-<br>	buf		resB	6       ;a variable which will store the accepted number from the user. 6 bytes are reserved for it. 5 digits of BCD+enter key
+<br>	buf		resB	6     
+  
+;a variable which will store the accepted number from the user. 6 bytes are reserved for it. 5 digits of BCD+enter key
 <br>	char_ans 	resB	4
 <br>	ans		resW	1
 <br>	
@@ -424,7 +426,9 @@ section .data
 <br>sub37:	SUB	AL,07H
 <br>sub30:	SUB	AL,30H
 <br>	
-<br>	ADD 	BX,AX     ; this now valid hex no is added to contents of bx. after 4 such iterations we will get a binary equivalent of the hex no
+<br>	ADD 	BX,AX     
+
+; this now valid hex no is added to contents of bx. after 4 such iterations we will get a binary equivalent of the hex no
 <br>	INC	RSI       ; increment rsi so that it points to the next hex digit
 <br>	DEC	RCX       ; decrement the counter rcx since its a counter for the no of digits of hex
 <br>	JNZ	next_byte ; keep going in a loop till the counter=0
