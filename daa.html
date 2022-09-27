@@ -42,6 +42,90 @@ if __name__ == '__main__':
               ['d', 1, 25],
               ['e', 3, 15]]
     print("Following is maximum profit sequence of jobs")
-    printJobScheduling(arr, 3)</pre>
+    printJobScheduling(arr, 3)
+    
+    
+    <h1>Assign 3</h1>
+        Pranav Lad (TYCOB119)
+code
+import java.util.*;
+public class Dijkstra
+{
+// initializing distance and cost matrix for taking input from user and storing the graph
+  public  int dist[] = new int[10];
+  public  int cost[][] = new int[10][10];
+// calc function will find the minimum distance from the given vertex and update in dist matrix
+  public void calc(int n,int s)
+  {
+    int flag[] = new int[n+1]; // flag array for checking if the vertex is taken or not
+    int i,minpos=1,k,c,minimum;
+       for(i=1;i<=n;i++)
+    {
+         flag[i]=0;
+         this.dist[i]=this.cost[s][i];
+     }
+    c=2;
+    while(c<=n)
+    {
+      minimum=99; // for updating distance whenever less that 99
+      for(k=1;k<=n;k++)
+      {
+             if(this.dist[k]<minimum && flag[k]!=1)
+           {
+            minimum=this.dist[i];
+            minpos=k; 
+           }
+         }
+              flag[minpos]=1;
+         c++;
+         for(k=1;k<=n;k++)
+    {     // if distance is less than previous distance updating in distance matrix
+            if(this.dist[minpos]+this.cost[minpos][k] <  this.dist[k] && flag[k]!=1 )
+          this.dist[k]=this.dist[minpos]+this.cost[minpos][k];
+    } 
+    }
+  }
+  public static void main(String args[])
+  {
+    int nodes,source,i,j;
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter the Number of Nodes \n"); // number of nodes in graph
+    nodes = in.nextInt(); 
+    Dijkstra d = new Dijkstra(); // initializing a dijkstra object
+    System.out.println("Enter the Cost Matrix Weights: \n"); // cost matrix input
+         for(i=1;i<=nodes;i++)
+            for(j=1;j<=nodes;j++)
+       {
+              d.cost[i][j]=in.nextInt();
+               if(d.cost[i][j]==0)
+                 d.cost[i][j]=999;
+            }
+     System.out.println("Enter the Source Vertex :\n");
+     source=in.nextInt();
+     d.calc(nodes,source); 
+     System.out.println("The Shortest Path from Source \t"+source+"\t to all other vertices are : \n");
+          for(i=1;i<=nodes;i++)
+             if(i!=source)
+      System.out.println("source :"+source+"\t   Destination :   "+i+"\t MinCost is :"+d.dist[i]+"\t");
+ }
+}
+OUTPUT
+Enter the Number of Nodes:
+5
+Enter the Cost Matrix Weights: 
+0 1 0 2 0
+1 0 1 0 4
+0 1 0 0 3
+2 0 0 0 3
+0 4 3 3 0
+Enter the Source Vertex : 1
+The Shortest Path from Source  1  to all other vertices are : 
+Source Vertex  : 1       Destination :   2	  Minimum Cost is :1 
+Source Vertex  : 1       Destination :   3	  Minimum Cost is :2 
+Source Vertex  : 1       Destination :   4 	  Minimum Cost is :2 
+Source Vertex  : 1       Destination :   5 	  Minimum Cost is :5 
+
+
+    </pre>
     </body>
 </html>
