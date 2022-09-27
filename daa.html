@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+      <h1>Assign 1</h1>
+      def mul(n1, n2, n):
+    if n==1:
+        return int(n1)*int(n2)
+    c2 = mul(n1[:n//2], n2[:n//2], n//2)
+    c0 = mul(n1[n//2:], n2[n//2:], n//2)
+    c1 = mul(str(int(n1[:n//2])+int(n1[n//2:])),str(int(n2[:n//2])+int(n2[n//2:])), n//2)
+    c1 = c1 - (c2 + c0)
+    return c2*(10**n) + c1*(10**(n//2)) + c0
+n1, n2 = map(str, input().split())
+length = max(len(n1), len(n2))
+n1 = n1.rjust(length + length%2, "0")
+n2 = n2.rjust(length + length%2, "0")
+print(str(mul(n1,n2,length)))
+      
+      <h1>assign 2</h1>
+      def printJobScheduling(arr, t):
+    n = len(arr)
+    for i in range(n):
+        for j in range(n - 1 - i):
+            if arr[j][2] < arr[j + 1][2]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    result = [False] * t
+    job = ['-1'] * t
+    for i in range(len(arr)):
+        for j in range(min(t - 1, arr[i][1] - 1), -1, -1):
+            if result[j] is False:
+                result[j] = True
+                job[j] = arr[i][0]
+                break
+    print(job)
+if __name__ == '__main__':
+    arr = [['a', 2, 100],  
+              ['b', 1, 19],
+              ['c', 2, 27],
+              ['d', 1, 25],
+              ['e', 3, 15]]
+    print("Following is maximum profit sequence of jobs")
+    printJobScheduling(arr, 3)
+    </body>
+</html>
